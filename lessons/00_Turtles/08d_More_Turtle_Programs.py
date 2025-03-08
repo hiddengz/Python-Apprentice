@@ -16,6 +16,7 @@ Use this code to get a random x and y location
 # Double click on this cell to copy the code
 
 import turtle as turtle
+import random as random
 
 turtle.setup(width=600, height=600)
 
@@ -41,8 +42,10 @@ def turtle_clicked(t, x, y):
     
     for i in range(0,360, 20): # Full circle, 20 degrees at a time
         t.tilt(20) # Tilt the turtle 20 degrees
-
+    
 # Connect the turtle to the turtle_clicked function
+x = random.randint(-300, 300)
+y = random.randint(-300, 300)
 t.onclick(lambda x, y, t=t: turtle_clicked(t, x, y))
 
 
