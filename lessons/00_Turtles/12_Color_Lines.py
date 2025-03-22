@@ -5,23 +5,35 @@ Color Lines
 
 """
 
-import turtle                           # Tell Python we want to work with the turtle
-turtle.setup (width=600, height=600)    # Set the size of the window
+import turtle
+tina = turtle.Turtle()
+tina.shape("turtle")
 
-tina = turtle.Turtle()                  # Create a turtle named tina
+forward = 50
+left = 90
+colors = [ 'red', 'blue', 'black', 'orange']
 
-tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
-
-
-colors = [ 'red', 'blue', 'black', 'orange']    # define a list of colors
-
-for color in colors:                            # loop through the colors
-    ... # Your code here
+for color in colors:
+    tina.color(color)
+    tina.forward(forward)
+    tina.left(left)
 
 
 # 2) Make another square, but put the colors in reverse order, using a negative index. 
 
-... # Your code here
+import turtle
+t = turtle.Turtle()
+t.shape("turtle")
+
+forward = 50
+left = 90
+colors = [ 'orange', 'black', 'blue', 'red']
+t.penup
+t.forward(60)
+t.pendown
+for color in colors:
+    t.color(color)
+    t.forward(forward)
+    t.left(left) # Your code here
 
 turtle.exitonclick()                     # Close the window when we click on it
